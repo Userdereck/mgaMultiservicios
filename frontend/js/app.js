@@ -21,3 +21,10 @@ document.getElementById("quoteForm").addEventListener("submit", async e => {
 
   document.getElementById("quoteResult").classList.remove("hidden");
 });
+
+// MENU HAMBURGUESA
+menuToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("show");
+  menuToggle.classList.toggle("active");
+});
+
