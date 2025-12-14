@@ -33,25 +33,45 @@
 
 
 <section class="calculator">
-<h1>Cotización Techos PVC</h1>
-<form id="quoteForm">
-<input id="length" type="number" placeholder="Largo (m)" required>
-<input id="width" type="number" placeholder="Ancho (m)" required>
-<button class="btn">Calcular</button>
-</form>
+  <h1>Cotización Techos PVC</h1>
+  <p class="calculator-note">
+    Ingresa las medidas del área para obtener una estimación automática.
+  </p>
 
-<div id="quoteResult" class="hidden">
-<h2>Resultado</h2>
-<ul>
-<li>Paneles: <span id="panels"></span></li>
-<li>Perfiles (m): <span id="profiles"></span></li>
-<li>Tornillos: <span id="screws"></span></li>
-</ul>
-<p>Materiales: RD$ <span id="materialsCost"></span></p>
-<p>Mano de obra: RD$ <span id="laborCost"></span></p>
-<h3>Total: RD$ <span id="total"></span></h3>
-</div>
+  <form id="quoteForm">
+    <input id="length" type="number" step="0.01" placeholder="Largo (m)" required>
+    <input id="width" type="number" step="0.01" placeholder="Ancho (m)" required>
+
+    <select id="areaType">
+      <option value="residential">Residencial</option>
+      <option value="commercial">Comercial</option>
+    </select>
+
+    <button class="btn">Calcular cotización</button>
+  </form>
+
+  <div id="quoteResult" class="hidden">
+    <h2>Resultado estimado</h2>
+
+    <ul class="quote-list">
+      <li>Área total: <strong><span id="area"></span> m²</strong></li>
+      <li>Láminas PVC: <span id="panels"></span></li>
+      <li>Moldura F: <span id="molduras"></span></li>
+      <li>Parales: <span id="parales"></span></li>
+    </ul>
+
+    <div class="quote-costs">
+      <p>Materiales: RD$ <span id="materialsCost"></span></p>
+      <p>Mano de obra: RD$ <span id="laborCost"></span></p>
+      <h3>Total estimado: RD$ <span id="total"></span></h3>
+    </div>
+
+    <p class="quote-disclaimer">
+      * Esta cotización es una estimación y puede variar según las condiciones del área.
+    </p>
+  </div>
 </section>
+
 
 <script src="js/app.js"></script>
 </body>
