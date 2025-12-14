@@ -1,0 +1,216 @@
+body{font-family:Arial;margin:0;background:#f5f5f5}
+.header{background:#0052A2;color:white;padding:15px;display:flex;justify-content:space-between}
+.header a{color:white;margin-left:15px;text-decoration:none}
+.hero{text-align:center;padding:60px;background:white}
+.btn{background:#FF7A00;color:white;padding:12px 20px;border:none;border-radius:6px}
+.service-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;padding:40px}
+.card{background:white;padding:20px;border-radius:10px;text-align:center}
+.calculator{padding:40px}
+.hidden{display:none}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f5f5f5;
+  color: #333;
+}
+
+/* HEADER */
+.header {
+  background: #0052A2;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  background: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hero-buttons {
+  margin-top: 30px;
+}
+
+/* SECTIONS */
+.section {
+  padding: 60px 30px;
+}
+
+.section.light {
+  background: white;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #0052A2;
+}
+
+/* BUTTONS */
+.btn {
+  background: #FF7A00;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  margin: 5px;
+  display: inline-block;
+}
+
+.btn.secondary {
+  background: #0052A2;
+}
+
+/* SERVICES GRID */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* FEATURES */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 20px;
+  text-align: center;
+}
+
+/* CTA */
+.cta {
+  background: #0052A2;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+/* FOOTER */
+.footer {
+  background: #111;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+}
+.hero.small {
+  padding: 50px 20px;
+}
+
+.hero.small h1 {
+  font-size: 2rem;
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+form input,
+form select,
+form textarea {
+  margin-top: 6px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  margin-top: 20px;
+  cursor: pointer;
+}
+.content {
+  max-width: 900px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+.process {
+  max-width: 600px;
+  margin: auto;
+  font-size: 1.1rem;
+}
+
+.process li {
+  margin-bottom: 12px;
+}
+/* HERO IMAGE */
+.hero-image {
+  background: url("../assets/hero.jpg") center/cover no-repeat;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 60px 30px;
+  text-align: center;
+  border-radius: 16px;
+  max-width: 900px;
+}
+
+/* ICONS */
+.service-icon {
+  font-size: 2.5rem;
+  color: #FF7A00;
+  margin-bottom: 15px;
+}
+
+/* ANIMATIONS */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* CARD HOVER */
+.card:hover {
+  transform: translateY(-5px);
+  transition: 0.3s ease;
+}
+
+/* BUTTON ICONS */
+.btn i {
+  margin-right: 8px;
+}
