@@ -218,6 +218,7 @@ form button {
 /* HEADER RESPONSIVE */
 .header {
   flex-wrap: wrap;
+  
 }
 
 .header nav {
@@ -361,4 +362,17 @@ form button {
 
 .menu-toggle.active span:nth-child(3) {
   transform: rotate(-45deg) translate(6px, -6px);
+}
+/* LOGO */
+.logo img {
+  height: 55px;
+  width: auto;
+  display: block;
+}
+
+/* Ajuste móvil */
+@media (max-width: 768px) {
+  .logo img {
+    height: 45px;
+  }
 }
