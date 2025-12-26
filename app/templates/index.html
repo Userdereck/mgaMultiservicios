@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!-- HERO -->
+<section class="hero">
+  <img src="{{ url_for('static', filename='img/hero.jpg') }}" class="hero-bg" alt="Servicios profesionales">
+
+  <div class="hero-overlay">
+    <h1>Servicios Técnicos Profesionales</h1>
+    <p>Techos PVC, electricidad, plomería y mantenimiento general</p>
+
+    <div class="hero-buttons">
+      <a href="/cotizar" class="btn-primary">Cotiza Ahora</a>
+      <a href="/contacto" class="btn-outline">Solicitar Visita</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section class="services container">
+  <h2>Nuestros Servicios</h2>
+
+  <div class="services-grid">
+
+    <div class="service-card">
+      <div class="icon">🏠</div>
+      <h3>Techos PVC</h3>
+      <p>Instalación moderna, resistente y de alta estética.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="icon">⚡</div>
+      <h3>Electricidad</h3>
+      <p>Instalaciones seguras para hogares y negocios.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="icon">🚰</div>
+      <h3>Plomería</h3>
+      <p>Reparaciones rápidas y soluciones duraderas.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="icon">🛠️</div>
+      <h3>Mantenimiento</h3>
+      <p>Servicios generales y preventivos.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- BENEFICIOS -->
+<section class="benefits">
+  <div class="container benefits-grid">
+
+    <div>
+      <h3>✔ Experiencia comprobada</h3>
+      <p>Personal capacitado y materiales certificados.</p>
+    </div>
+
+    <div>
+      <h3>✔ Atención personalizada</h3>
+      <p>Soluciones a la medida de cada cliente.</p>
+    </div>
+
+    <div>
+      <h3>✔ Precios competitivos</h3>
+      <p>Cotizaciones claras y sin sorpresas.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <h2>¿Listo para mejorar tu espacio?</h2>
+  <p>Solicita tu cotización ahora mismo</p>
+  <a href="/cotizar" class="btn-primary">Solicitar Cotización</a>
+</section>
+
+{% endblock %}

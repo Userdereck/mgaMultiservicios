@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MG&A Multiservicios</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="container header-content">
+    <img src="{{ url_for('static', filename='img/logo.png') }}" alt="MG&A Multiservicios" class="logo">
+
+    <nav class="nav">
+      <a href="/">Inicio</a>
+      <a href="/servicios">Servicios</a>
+      <a href="/cotizar">Cotizar</a>
+      <a href="/contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  {% block content %}{% endblock %}
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <h4>MG&A Multiservicios</h4>
+      <p>Soluciones profesionales para hogares y negocios.</p>
+    </div>
+
+    <div>
+      <h4>Servicios</h4>
+      <ul>
+        <li>Techos PVC</li>
+        <li>Electricidad</li>
+        <li>Plomería</li>
+        <li>Mantenimiento</li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Contacto</h4>
+      <p>📞 WhatsApp</p>
+      <p>📧 Correo</p>
+    </div>
+  </div>
+
+  <p class="copyright">
+    © {{ 2025 }} MG&A Multiservicios. Todos los derechos reservados.
+  </p>
+</footer>
+
+</body>
+</html>

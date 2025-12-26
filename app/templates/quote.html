@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<section class="quote-section container">
+  <h1 class="quote-title">Calculadora de Cotización</h1>
+  <p class="quote-subtitle">Obtén una estimación rápida y clara</p>
+
+  <!-- Selector de servicio -->
+  <div class="service-selector">
+    <button class="service-btn active" data-service="pvc">Techo PVC</button>
+    <button class="service-btn" data-service="ac">Aire Acondicionado</button>
+  </div>
+
+  <!-- ================= PVC ================= -->
+  <form id="pvc-form" class="quote-card">
+
+    <h3>Techo PVC</h3>
+
+    <h4>Datos de contacto</h4>
+    <div class="form-grid">
+      <input type="text" id="pvc-nombre" placeholder="Nombre completo" required>
+      <input type="email" id="pvc-correo" placeholder="Correo electrónico">
+      <input type="tel" id="pvc-whatsapp" placeholder="WhatsApp" required>
+    </div>
+
+    <h4>Tipo de área</h4>
+    <select id="areaTipo">
+      <option value="residencial">Residencial</option>
+      <option value="comercial">Comercial</option>
+    </select>
+
+    <h4>Áreas a cotizar</h4>
+    <div id="areasContainer"></div>
+
+    <button type="button" onclick="agregarAreaPVC()">➕ Agregar área</button>
+
+    <button type="button" class="btn-primary" onclick="calcularPVC()">
+      Calcular Cotización
+    </button>
+  </form>
+
+  <!-- ================= AC ================= -->
+  <form id="ac-form" class="quote-card hidden">
+
+    <h3>Aire Acondicionado</h3>
+
+    <h4>Datos de contacto</h4>
+    <div class="form-grid">
+      <input type="text" id="ac-nombre" placeholder="Nombre completo" required>
+      <input type="email" id="ac-correo" placeholder="Correo electrónico">
+      <input type="tel" id="ac-whatsapp" placeholder="WhatsApp" required>
+    </div>
+
+    <div class="form-grid">
+      <select id="acServicio">
+        <option value="instalacion">Instalación</option>
+        <option value="mantenimiento">Mantenimiento</option>
+      </select>
+      <input type="number" id="cantidadAC" min="1" value="1">
+    </div>
+
+    <button type="button" class="btn-primary" onclick="calcularAC()">
+      Calcular Cotización
+    </button>
+  </form>
+
+  <!-- ================= RESULTADO ================= -->
+  <div id="resultado" class="result-card hidden"></div>
+
+  <!-- ================= ESQUEMA VISUAL ================= -->
+  <div id="roof-visual" class="hidden">
+    <h3>Vista esquemática del techo</h3>
+     <div class="roof-container">
+        <div id="roofDiagram"></div>
+     </div>
+  </div>
+
+</section>
+
+<script src="{{ url_for('static', filename='js/quote.js') }}"></script>
+
+{% endblock %}
